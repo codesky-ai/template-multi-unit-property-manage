@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Cairo", "Noto Sans Arabic", "Amiri", serif;
+  line-height: 1.5;
+  font-weight: 400;
+  direction: rtl;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  /* Arabic text rendering */
+  font-feature-settings: "rlig", "calt", "liga", "kern", "arab";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  direction: rtl;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  direction: rtl;
+  font-family: "Cairo", "Noto Sans Arabic", "Amiri", serif;
+}
+
+.font-arabic {
+  font-family: "Cairo", "Noto Sans Arabic", "Amiri", serif;
+  font-feature-settings: "rlig", "calt", "liga", "kern", "arab";
+  text-rendering: optimizeLegibility;
+}
+
+.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+/* تنسيق خاص للنماذج */
+.form-input {
+  direction: rtl;
+  text-align: right;
+}
+
+/* تنسيق خاص للجداول */
+.table-rtl {
+  direction: rtl;
+}
+
+.table-rtl th,
+.table-rtl td {
+  text-align: right;
+}
+
+/* إصلاح اتجاه العناصر */
+.flex-rtl {
+  flex-direction: row-reverse;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+}
+
+/* RTL Support */
+html[dir="rtl"] {
+  text-align: right;
+}
+
+.font-arabic {
+  font-family: 'Noto Sans Arabic', 'Cairo', sans-serif;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "rlig", "calt", "liga", "kern", "arab";
+}
